@@ -8,3 +8,5 @@ RUN locale-gen en_US en_US.UTF-8
 RUN dpkg-reconfigure locales
 RUN echo 'export APACHE_RUN_USER=root' >> /etc/apache2/envvars
 RUN echo 'export APACHE_RUN_GROUP=root' >> /etc/apache2/envvars
+RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
+RUN apt-get install nodejs
