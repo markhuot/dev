@@ -6,3 +6,5 @@ RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 RUN locale-gen en_US en_US.UTF-8
 RUN dpkg-reconfigure locales
+RUN echo 'export APACHE_RUN_USER=root' >> /etc/apache2/envvars
+RUN echo 'export APACHE_RUN_GROUP=root' >> /etc/apache2/envvars
